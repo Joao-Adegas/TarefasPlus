@@ -1,40 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 📋 Plataforma de Tarefas Colaborativas
 
-## Getting Started
+Projeto desenvolvido **exclusivamente para fins de estudo**, com o objetivo de praticar conceitos modernos de **desenvolvimento web**, **autenticação**, **persistência de dados** e **interação entre usuários**.
 
-First, run the development server:
+A aplicação permite que usuários criem, removam e compartilhem tarefas simples (apenas uma string). Quando uma tarefa é marcada como pública, outros usuários podem interagir deixando comentários.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias Utilizadas
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+* **Next.js** – Framework React com renderização híbrida (SSR/SSG)
+* **Firebase**
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  * Authentication (Login com Google Provider)
+  * Firestore Database
+* **Google Auth Provider** – Autenticação segura e rápida
+* **TypeScript** *(opcional, caso esteja usando)*
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔐 Autenticação
 
-## Learn More
+O acesso à plataforma é feito através do **login com conta Google**, utilizando o Firebase Authentication.
 
-To learn more about Next.js, take a look at the following resources:
+* Apenas usuários autenticados podem:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+  * Criar tarefas
+  * Excluir suas próprias tarefas
+  * Comentar em tarefas públicas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📝 Funcionalidades
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 👤 Usuário
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+* Login com Google
+* Logout
+
+### ✅ Tarefas
+
+* Criar uma tarefa (texto simples)
+* Excluir **apenas tarefas próprias**
+* Marcar tarefa como **pública** ou **privada**
+
+### 🌍 Tarefas Públicas
+
+* Tarefas públicas ficam visíveis para todos os usuários
+* Outros usuários podem:
+
+  * Visualizar a tarefa
+  * Comentar sobre ela
+
+### 💬 Comentários
+
+* Comentários associados a uma tarefa pública
+* Apenas usuários autenticados podem comentar
+
+---
+
+## 🧠 Regras de Negócio
+
+* Usuários **não podem excluir tarefas de outros usuários**
+* Comentários só podem ser feitos em tarefas públicas
+* Tarefas privadas são visíveis apenas para o criador
+
+---
+
+## 🗄️ Estrutura de Dados (Exemplo)
+
+### Tarefa
+
+* `id`
+* `content` (string)
+* `public` (boolean)
+* `createdAt`
+* `userId`
+* `userName`
+
+### Comentário
+
+* `id`
+* `taskId`
+* `comment`
+* `userId`
+* `userName`
+* `createdAt`
+
+---
+
+## 📚 Objetivos de Aprendizado
+
+Este projeto foi criado para praticar:
+
+* Autenticação com Firebase
+* Providers de login (Google)
+* Integração Next.js + Firebase
+* Controle de permissões no Front-End
+* Leitura e escrita no Firestore
+* Conceitos de aplicações colaborativas
+
+---
+
+## ▶️ Como Executar o Projeto
+
+1. Clone o repositório
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Configure o Firebase:
+
+   * Crie um projeto no Firebase
+   * Ative Authentication com Google
+   * Configure o Firestore
+   * Adicione as variáveis de ambiente
+
+4. Execute o projeto:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📌 Observações
+
+* Projeto **educacional**, não destinado a uso em produção
+* Ideal para estudos de **Next.js**, **Firebase** e **autenticação social**
+
+---
+
+## 📄 Licença
+
+Este projeto é livre para fins de estudo e aprendizado.
+
+---
+
+Desenvolvido com foco em aprendizado e evolução contínua 🚀
