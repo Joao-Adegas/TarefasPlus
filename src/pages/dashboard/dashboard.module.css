@@ -1,0 +1,73 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.checkBoxArea{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.content_form{
+    max-width: 1024px;
+    width: 100%;
+}
+
+.checkbox{
+    width: 18px;
+    height: 18px;
+}
+
+.button{
+    border: none;
+    background-color: rgb(61, 148, 247);
+    color: white;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.taskContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.taskContent{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tag{
+    background-color: rgb(64, 139, 236);
+    color: white;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.action{
+    border: none;
+    background: none;
+}

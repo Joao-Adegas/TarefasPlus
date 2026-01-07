@@ -1,0 +1,92 @@
+.container{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.task{
+    border: 1.5px solid #909090;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task p{
+    white-space:  pre-wrap;
+    width: 100%;
+}
+
+.comentsContainer{
+    padding: 0.4rem;
+    max-width: 1024px;
+}
+
+.button{
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    background-color: #3183ff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.button:disabled{
+    cursor: not-allowed;
+    background-color: #3183ffad;
+}
+
+.containerComment{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(199, 196, 196, 0.589);
+    border-radius: 0.3rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1024px;
+    padding: 1rem;
+}
+
+.topContainerComment{
+    display: flex;
+    gap: 1rem;
+}
+
+.listComments{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.userContainer{
+    color: white;
+    background-color: gray;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+}
+
+.deleteComent{
+    border: none;
+    background: none;
+    cursor: pointer;
+}

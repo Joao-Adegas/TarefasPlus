@@ -1,0 +1,59 @@
+.header{
+    background-color: black;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.span{
+    text-decoration: none;
+    color: white;
+}
+
+.plus{
+    color: red;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.acessarBtn{
+    border: 1px solid white;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    background: none;
+    color: white;
+}
+
+.acessarBtn:hover{
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 2.5rem;
+}
+
+.painel{
+    color:black;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
