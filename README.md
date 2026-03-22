@@ -1,5 +1,7 @@
 # 📋 Plataforma de Tarefas Colaborativas
 
+![demo](./assets/gif.gif)
+
 Projeto desenvolvido **exclusivamente para fins de estudo**, com o objetivo de praticar conceitos modernos de **desenvolvimento web**, **autenticação**, **persistência de dados** e **interação entre usuários**.
 
 A aplicação permite que usuários criem, removam e compartilhem tarefas simples (apenas uma string). Quando uma tarefa é marcada como pública, outros usuários podem interagir deixando comentários.
