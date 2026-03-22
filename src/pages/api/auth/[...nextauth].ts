@@ -5,10 +5,15 @@ export const authOptions = {
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_ID as string,
-            clientSecret: process.env.GOOGLE_SECRET as string
+            clientSecret: process.env.GOOGLE_SECRET as string,
+            authorization: {
+                params: {
+                    prompt: "select_account",
+                },
+            },
         })
     ],
-    secret: process.env.JWT_SECRET 
+    secret: process.env.JWT_SECRET
 }
 
 export default NextAuth(authOptions);
